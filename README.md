@@ -47,6 +47,8 @@
 * [Getting started with Hardware](#start_hardware)
 * [Contributing](#contributing)
 
+###### If you come across any errors in any of the docs or code please [Create an issue](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/creating-an-issue) or fix the issue and [Create a pull request](https://scotch.io/tutorials/creating-your-first-pull-request-in-github)!
+
 <a name="mission"></a>
 ## Club mission
 The DC Tech & Robotics Club is for students interested in robotics or engineering. Our main focus is in robotics but we also investigate other areas of technology and engineering. We do a variety of projects and also compete in the Square One Innovative Vehicle Design Competition. Meet most Mondays and Fridays till around 4:00pm.
