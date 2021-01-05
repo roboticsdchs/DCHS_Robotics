@@ -91,7 +91,7 @@ For 2d design there are a few options that you can use to design things one of t
 
 #### Using 2d design software
 
-To learn how to use 2d design software. To learn Photoshop you can follow [this](https://www.oberlo.com/blog/how-to-use-photoshop) tutoral. To learn how to use Inkscape [here](https://inkscape.org/learn/). Learn to use FUSION 360 for lasercutting [here](https://core-electronics.com.au/tutorials/making-boxes-with-fusion-360-for-laser-cutting-tutorial.html).  
+To learn how to use 2d design software. To learn Photoshop you can follow [this](https://www.oberlo.com/blog/how-to-use-photoshop) tutorial. To learn how to use Inkscape [here](https://inkscape.org/learn/). Learn to use FUSION 360 for lasercutting [here](https://core-electronics.com.au/tutorials/making-boxes-with-fusion-360-for-laser-cutting-tutorial.html).  
 
 ### 3d design
 
@@ -105,10 +105,9 @@ For 3d CAD design there are a multitude of options you can chooses from one of t
 
 To learn to use 3d CAD software can be very challenging some good resources to checkout to get started are [this](https://www.tinkercad.com/learn/designs) for learning TINKERCAD and [this](https://www.youtube.com/playlist?list=PLznyNXKQaKuetAIXhN-ihc1uhxti-oayo) for learning FUSION 360.
 
-<a name="prerequisites"></a>
 ### Prerequisites to run basic tests
 
-To run the basic tests which you will probally want to do at some point you will want Git, a text editor, python 3, and the Arduino ide to get the basic tests up and running but it isn't completely necessary so if you have no interest in running the basic steps you a skip this step. 
+To run the basic tests which you will probably want to do at some point you will want Git, a text editor, python 3, and the Arduino ide to get the basic tests up and running but it isn't completely necessary so if you have no interest in running the basic steps you a skip this step. 
 
 
 1. To install Git on your system I recommend following [GitHub's guide on Installing Git](https://github.com/git-guides/install-git).
@@ -119,7 +118,6 @@ To run the basic tests which you will probally want to do at some point you will
 
 4. Lastly you will need the Arduino IDE for programming the Arduino microcontroller. You can download the Arduino IDE from the [Arduino Website](https://www.arduino.cc/en/software).
 
-<a name="installation"></a>
 ### Installation
 
 If you are just wanting to run the code you should clone the repository. To do so I recommend following [GitHubs guide on cloning a repository](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository). 
@@ -132,7 +130,6 @@ To run the basics tests for the arduino simply follow [this](https://www.arduino
 
 To run the basics tests for the raspberry pi (python) follow [this](https://realpython.com/run-python-scripts/)
 
-<a name="usage"></a>
 ### Learning the Basics
 
 If you want to learn how to write the basic tests or just gain a deeper understanding of how they work:

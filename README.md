@@ -12,7 +12,7 @@
 [![Issues][issues-shield]][issues-url]
 
 
-<!-- PROJECT LOGO (need a logo first -->
+<!-- PROJECT LOGO (need a logo first) -->
 <!--
 <br />
 <p align="center">

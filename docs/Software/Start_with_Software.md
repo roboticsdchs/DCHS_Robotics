@@ -4,7 +4,6 @@ To get a local copy or fork up and running follow these steps.
 
 ###### Don't worry about learning everything off the bat it will take some time. If you aren't interested in any of these things you can contribute to the club and this repository in other ways.
 
-<a name="prerequisites"></a>
 ### Prerequisites
 To be able to work on this project you will need Git, a text editor, python 3, and the Arduino ide to get the software up and running. 
 
@@ -16,14 +15,12 @@ To be able to work on this project you will need Git, a text editor, python 3, a
 
 4. Lastly you will need the Arduino IDE for programming the Arduino microcontroller. You can download the Arduino IDE from the [Arduino Website](https://www.arduino.cc/en/software).
 
-<a name="installation"></a>
 ### Installation
 
 If you are just wanting to run the code you should clone the repository. To do so I recommend following [GitHubs guide on cloning a repository](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository). 
 
 If you are planning to make a pull request you will need to fork the repository. To fork a repository follow [this](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo).
 
-<a name="usage"></a>
 ### running the basic tests
 
 You have now installed all of this stuff so how do you actually use it?
@@ -38,20 +35,17 @@ To learn the Arduino IDE and the Arduino language I recommend [Paul McWhorter's 
 
 ###### If you need help with any part of this feel free to ask another member of the club.
 
-<!--
 # The challenges we need to solve this year
-- [ ] [Alpha - Autonomous Motion]
-- [ ] [Bravo - Obstacle / Crash Avoidance]
-- [ ] [Charlie - Lane Assist]
-- [ ] [Delta - Parking Shark]
-- [ ] [Echo - Parking Garage]
-- [ ] [Foxtrot - Station Navigation]
-- [ ] [Golf Task - Fleet Transport]
-- [ ] [Mobility Exhibition] 
-- [ ] [AIVD Cyber Security Challenge (IN DEVELOPMENT)]
+- [ ] [Alpha - Autonomous Motion](2020-2021/Alpha)
+- [ ] [Bravo - Obstacle / Crash Avoidance](2020-2021/Bravo)
+- [ ] [Charlie - Lane Assist](2020-2021/Charlie)
+- [ ] [Delta - Parking Shark](2020-2021/Delta)
+- [ ] [Echo - Parking Garage](2020-2021/Echo)
+- [ ] [Foxtrot - Station Navigation](2020-2021/Foxtrot)
+- [ ] [Golf Task - Fleet Transport](2020-2021/Golf_Task)
+- [ ] [Mobility Exhibition](2020-2021/Mobility_Exhibition)
+- [ ] [AIVD Cyber Security Challenge (IN DEVELOPMENT)](2020-2021/AIVD_Cyber_Security_Challenge)
 
-create dirs for every challenge with docs for that challenge in the folder for the challenge. then link to them here.
--->
 ## Other Software projects
 - [ ] Make a python library to control the arduino from the pi without having to know the arduino language to pass commands to the arduino.
 - [ ] Figure out how to use the camera on the car for distance sensing and get rid of as many of the ultrasonic senors as possible.
