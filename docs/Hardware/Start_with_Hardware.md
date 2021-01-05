@@ -1,6 +1,6 @@
 # Getting started with Hardware
 
-###### Don't worry about learning everything off the bat it will take some time. If you aren't interested in any of these things you can contribute to the club and this repository in othere ways.
+###### Don't worry about learning everything off the bat it will take some time. If you aren't interested in any of these things you can contribute to the club and this repository in other ways.
 
 ## Hardware Systems
 
@@ -75,8 +75,7 @@ The light are controlled by the arduino that is responsible for car control that
 - [ ] Hide the cables and microprocessors.
 - [ ] Make the steering run true without software correction.
 - [ ] Make interchangeable slot things for the different sized ultrasonic sensors.
-
-
+- [ ] Make a drive up battery charger for the car so you can drive it to and from the charger remotely.
 
 ## CAD
 
@@ -100,7 +99,7 @@ In out club 3d design is mostly used for designing and making 3d printed parts.
 
 #### Software for 3d design
 
-For 3d CAD design there are a multitude of options you can chooses from one of the easiest and best being [TINKERCAD](https://www.tinkercad.com). Anothere good option for 3d CAD design is [FUSION 360][FUSION 360] which is very powerful but not as intuitive. 
+For 3d CAD design there are a multitude of options you can chooses from one of the easiest and best being [TINKERCAD](https://www.tinkercad.com). Another good option for 3d CAD design is [FUSION 360][FUSION 360] which is very powerful but not as intuitive. 
 
 #### Using 3d CAD software
 
@@ -114,9 +113,9 @@ To run the basic tests which you will probally want to do at some point you will
 
 1. To install Git on your system I recommend following [GitHub's guide on Installing Git](https://github.com/git-guides/install-git).
 
-2. You will need a text editor to edit the files I prefer [Vim][Vim] but it has a large learning curve so download what ever text editor you want. Some popular options othere than [Vim][Vim] are [Visual Studio Code](https://code.visualstudio.com/Download), [Notepad ++](https://notepad-plus-plus.org/downloads/), and [Sublime Text](https://www.sublimetext.com/3). There are many options, pick whatever you are the most comfortable with or whatever looks cool. A text editor is optional for running the basic tests but it is necessary if you want to create or modify any files.
+2. You will need a text editor to edit the files I prefer [Vim][Vim] but it has a large learning curve so download what ever text editor you want. Some popular options other than [Vim][Vim] are [Visual Studio Code](https://code.visualstudio.com/Download), [Notepad ++](https://notepad-plus-plus.org/downloads/), and [Sublime Text](https://www.sublimetext.com/3). There are many options, pick whatever you are the most comfortable with or whatever looks cool. A text editor is optional for running the basic tests but it is necessary if you want to create or modify any files.
 
-3. Next you will need python 3 the programming language that we write everything for the [Raspberry Pi][Raspberry Pi] in. You can install python 3 in a few different ways. You could use a packet manager like [asfd](https://asdf-vm.com/#/) which is my preference or with [pyenv](https://github.com/pyenv/pyenv#installation) anothere packet manager or directly from the [python website](https://www.python.org/downloads/).
+3. Next you will need python 3 the programming language that we write everything for the [Raspberry Pi][Raspberry Pi] in. You can install python 3 in a few different ways. You could use a packet manager like [asfd](https://asdf-vm.com/#/) which is my preference or with [pyenv](https://github.com/pyenv/pyenv#installation) another packet manager or directly from the [python website](https://www.python.org/downloads/).
 
 4. Lastly you will need the Arduino IDE for programming the Arduino microcontroller. You can download the Arduino IDE from the [Arduino Website](https://www.arduino.cc/en/software).
 
@@ -131,7 +130,7 @@ If you are planning to make a pull request you will need to fork the repository.
 
 To run the basics tests for the arduino simply follow [this](https://www.arduino.cc/en/main/howto)
 
-To run the baics tests for the raspberry pi (python) follow [this](https://realpython.com/run-python-scripts/)
+To run the basics tests for the raspberry pi (python) follow [this](https://realpython.com/run-python-scripts/)
 
 <a name="usage"></a>
 ### Learning the Basics
@@ -140,13 +139,13 @@ If you want to learn how to write the basic tests or just gain a deeper understa
 
 To learn how to use Git I recommend watching and reading about [The Missing Semester's](https://missing.csail.mit.edu/2020/version-control/) lecture on Git but if you don't have the patience or time you can read [this article](https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/) and learn the basics.
 
-Learning how to use the text editor you chose is very dependiant on which one you chose. If you decided to use vim I reccomend watching and reading about [The Missing Semester's](https://missing.csail.mit.edu/2020/editors/) lecture on Vim, playing [Vim Adventures](https://vim-adventures.com), watching Vim screencasts you can find some at [Vimcasts](http://vimcasts.org), and looking at othere people's vimrc's you can find many on GitHub, here is [mine](https://github.com/N1H1L0/.dotfiles/blob/main/vim/vimrc). As for the othere text editors to learn the basics of Visual Studio Code look at [this](https://code.visualstudio.com/docs/getstarted/introvideos), for Notepad ++ look at [this](https://npp-user-manual.org/docs/getting-started/), for Sublime Text look at [this](https://sublime-text-unofficial-documentation.readthedocs.io/en/latest/basic_concepts.html). If you are using a different text editor or need more resources look on [Google](https://www.google.com) there are plenty of resources out there that will help you and if you are really struggling you could always ask someone else in the club.
+Learning how to use the text editor you chose is very dependiant on which one you chose. If you decided to use vim I reccomend watching and reading about [The Missing Semester's](https://missing.csail.mit.edu/2020/editors/) lecture on Vim, playing [Vim Adventures](https://vim-adventures.com), watching Vim screencasts you can find some at [Vimcasts](http://vimcasts.org), and looking at other people's vimrc's you can find many on GitHub, here is [mine](https://github.com/N1H1L0/.dotfiles/blob/main/vim/vimrc). As for the other text editors to learn the basics of Visual Studio Code look at [this](https://code.visualstudio.com/docs/getstarted/introvideos), for Notepad ++ look at [this](https://npp-user-manual.org/docs/getting-started/), for Sublime Text look at [this](https://sublime-text-unofficial-documentation.readthedocs.io/en/latest/basic_concepts.html). If you are using a different text editor or need more resources look on [Google](https://www.google.com) there are plenty of resources out there that will help you and if you are really struggling you could always ask someone else in the club.
 
-To learn python I recommend the [Python for Everybody](https://www.coursera.org/specializations/python) course for a good basic overview. For a more advanced understanding of python I recommend really just using it in projects and looking at othere people's projects on GitHub.
+To learn python I recommend the [Python for Everybody](https://www.coursera.org/specializations/python) course for a good basic overview. For a more advanced understanding of python I recommend really just using it in projects and looking at other people's projects on GitHub.
 
 To learn the Arduino IDE and the Arduino language I recommend [Paul McWhorter's Arudino Lessons](https://www.youtube.com/playlist?list=PLGs0VKk2DiYx6CMdOQR_hmJ2NbB4mZQn-).
 
-###### If you need help with any part of this feel free to ask anothere member of the club.
+###### If you need help with any part of this feel free to ask another member of the club.
 
 <!-- LINKS -->
 [FUSION 360]: https://www.autodesk.com/products/fusion-360/overview
