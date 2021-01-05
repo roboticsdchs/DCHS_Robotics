@@ -36,15 +36,15 @@ To learn the Arduino IDE and the Arduino language I recommend [Paul McWhorter's 
 ###### If you need help with any part of this feel free to ask another member of the club.
 
 # The challenges we need to solve this year
-- [ ] [Alpha - Autonomous Motion](2020-2021/Alpha)
-- [ ] [Bravo - Obstacle / Crash Avoidance](2020-2021/Bravo)
-- [ ] [Charlie - Lane Assist](2020-2021/Charlie)
-- [ ] [Delta - Parking Shark](2020-2021/Delta)
-- [ ] [Echo - Parking Garage](2020-2021/Echo)
-- [ ] [Foxtrot - Station Navigation](2020-2021/Foxtrot)
-- [ ] [Golf Task - Fleet Transport](2020-2021/Golf_Task)
-- [ ] [Mobility Exhibition](2020-2021/Mobility_Exhibition)
-- [ ] [AIVD Cyber Security Challenge (IN DEVELOPMENT)](2020-2021/AIVD_Cyber_Security_Challenge)
+- [ ] [Alpha - Autonomous Motion](2020-2021/Alpha/Alpha.md)
+- [ ] [Bravo - Obstacle / Crash Avoidance](2020-2021/Bravo/Bravo.md)
+- [ ] [Charlie - Lane Assist](2020-2021/Charlie/Charlie.md)
+- [ ] [Delta - Parking Shark](2020-2021/Delta/Delta.md)
+- [ ] [Echo - Parking Garage](2020-2021/Echo/Echo.md)
+- [ ] [Foxtrot - Station Navigation](2020-2021/Foxtrot/Foxtrot.md)
+- [ ] [Golf Task - Fleet Transport](2020-2021/Golf_Task/Golf_Task.md)
+- [ ] [Mobility Exhibition](2020-2021/Mobility_Exhibition/Mobility_Exhibition.md)
+- [ ] [AIVD Cyber Security Challenge (IN DEVELOPMENT)](2020-2021/AIVD_Cyber_Security_Challenge/AIVD_Cyber_Security_Challenge.md)
 
 ## Other Software projects
 - [ ] Make a python library to control the arduino from the pi without having to know the arduino language to pass commands to the arduino.
