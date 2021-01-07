@@ -3,14 +3,6 @@
 *** When linking if the word or phrase you are using as the first part of the link comes up more than once add the phrase and link to the bottom of the page otherwise just add the link inline
 *** For the syntax of markdown you can look at https://www.markdownguide.org/basic-syntax
 -->
-<!-- PROJECT SHIELDS -->
-<!--
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-
 
 <!-- PROJECT LOGO (need a logo first) -->
 <!--
