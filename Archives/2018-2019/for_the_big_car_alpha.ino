@@ -1,57 +1,48 @@
-int leftangle = 80;
-int center = 88;
-int rightangle = 95;
 int TrueSpeed;
 int Angle;
-int moveport = 10;
-int turnport = 9;
-#include <Servo.h>
 
-Servo turnmotor;
-Servo movemotors;
 void setup() {
-  turnmotor.attach(turnport);
-  movemotors.attach(moveport);
-  turnmotor.write(center);
-  delay(5000);
- // Forward();
-  Left();
-  movemotors.write(90);
- 
+  pinMode(9, OUTPUT); //motor
+  pinMode(7, OUTPUT); //servo (I hope)
+
 }
 
 
 void Forward() {
   TrueSpeed = 254;
-  movemotors.write(110);
+  analogWrite(9, TrueSpeed);
   delay(5000);
 }
 void Backward() {
   TrueSpeed = 127;
-  movemotors.write(70);
+  analogWrite(9, TrueSpeed);
   delay(5000);
 }
   void Stop() {
     TrueSpeed = 191;
-    movemotors.write(90);
+    analogWrite(9, TrueSpeed);
     delay(5000);
   }
   void Left() {
     TrueSpeed = 254;
-    movemotors.write(110);
-    turnmotor.write(leftangle);
-    delay(5000);
-    turnmotor.write(center);
+    analogWrite(9, TrueSpeed);
+    Angle = 85;
+    analogWrite(7, 85);
+    delay(5000):
     }
 
     void Right() {
     TrueSpeed = 254;
-    movemotors.write(110);
-    turnmotor.write(rightangle);
-    delay(5000);
-    turnmotor.write(center);
+    analogWrite(9, TrueSpeed);
+    Angle = 100;
+    analogWrite(7, 100);
+    delay(5000):
     }
+
+
+
+
 
 
   void loop() {
-    }
+}
