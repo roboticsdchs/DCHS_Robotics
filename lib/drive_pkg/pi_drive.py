@@ -4,127 +4,53 @@ import pyfirmata
 import time
 import sys
 
-board = pyfirmata.Arduino(drive_port)
+#what does true_speed do? do we need to include it in anything?
 
-def drive_setup():
-  board.digital[drive_port].mode = PWM
-  board.digital[turn_port].mode = SERVO
-
-
-# def port to send stuff to 
-def board_drive_port(port):
-  global board_drive_port 
-  board_drive_port ="'" +  port + "'"
-
-def drive_pin(pin):
-  global drive_pin
-  drive_pin = pin
-
-def turn_pin(pin):
-  global turn_pin
-  turn_pin = pin
-
-
-# steering
-def left_max_angle(left);
-  global left_max_angle
-  left_max_angle = left
-
-def right_max_angle(right):
-  global right_max_angle
-  right_max_angle = right
-
-def center(cent):
-  global center
-  center = cent
-
-# vars that might get redefined multiple times 
-def true_speed(speed):
-  global true_speed
-  true_speed = speed
-
-def motor_speed(speed):
-  global motor_speed
-  motor_speed = sped
-
-def steering_angle(angle):
-  global steering_angle
-  steering_angle = angle 
-
+# setup for pyFirmata
+def board_drive_setup(board_drive_port):
+  global board_drive = pyfirmata.Arduino("'" + drive_board_port + "'")
+  
 # forward drive commands
-def forward_motor_speed(speed):
-  global forward_motor_speed
-  forward_motor_speed = speed
-
-def forward_center(cent):
-  global forward_center
-  forward_center = cent
-
-def forward(delay):
-  motor_speed = forward_motor_speed
-  steering_angle = forward_center 
-  board.digital[drive_pin].write(motor_speed)
-  board.digital[turn_pin].write(backward_center)
+def forward(drive_pin, turn_pin, forward_motor_speed, forward_center, delay):
+  board_drive.digital[drive_pin].mode = PWM
+  board_drive.digital[turn_pin].mode = SERVO
+  board_drive.digital[drive_pin].write(forward_motor_speed)
+  board_drive.digital[turn_pin].write(backward_center)
   sleep(delay)
 
 # backward drive commands 
-def backward_motor_speed(speed):
-  global backward_motor_speed
-  backward_motor_speed = speed
-
-def backward_center(cent):
-  global center
-  center = cent
-
-def backward(delay):
-  motor_speed = backward_motor_speed
-  steering_angle = backward_center
-  board.digital[drive_pin].write(motor_speed)
-  board.digital[turn_pin].write(backward_center)
+def backward(drive_pin, turn_pin, backward_motor_speed, backward_center, delay):
+  board_drive.digital[drive_pin].mode = PWM
+  board_drive.digital[turn_pin].mode = SERVO
+  board_drive.digital[drive_pin].write(backward_motor_speed)
+  board_drive.digital[turn_pin].write(backward_center)
   sleep(delay)
 
-
 # left drive commands
-def left_motor_speed(speed):
-  global right_motor_speed
-  left_motor_speed = speed
-
-def left_steering_angle(angle):
-  global left_steering_angle
-  left_steering_angle = angle
-
-def left (delay)
-  motor_speed = motor_speed
-  steering_angle = left_max_angle
-  board.digital[drive_pin].write(motor_speed)
-  board.digital[turn_pin].write(left_max_angle)
+def left(drive_pin, turn_pin, left_motor_speed, left_max_angle, left_delay):
+  board_drive.digital[drive_pin].mode = PWM
+  board_drive.digital[turn_pin].mode = SERVO
+  board_drive.digital[drive_pin].write(left_motor_speed)
+  board_drive.digital[turn_pin].write(left_max_angle)
   sleep(delay)
 
 # right drive commands
-def right_motor_speed(speed):
-  global right_motor_speed
-  right_motor_speed = speed
-
-def right_steering_angle(angle):
-  global right_steering_angle
-  right_steering_angle = angle
-
-def right (delay)
-  motor_speed = right_motor_speed
-  steering_angle = right_max_angle
-  board.digital[drive_pin].write(motor_speed)
-  board.digital[turn_pin].write(right_max_angle)
+def right(drive_pin, turn_pin, right_motor_speed, right_turn_angle, right_delay):
+  board_drive.digital[drive_pin].mode = PWM
+  board_drive.digital[turn_pin].mode = SERVO
+  board_drive.digital[drive_pin].write(right_motor_speed)
+  board_drive.digital[turn_pin].write(right_turn_angle)
   sleep(delay)
 
-
-# drive commands 
-def drive(delay):
-  board.digital[drive_pin].write(motor_speed)
-  board.digital[turn_pin].write(right_max_angle)
+# general drive commands 
+def drive(drive_pin, turn_pin, motor_speed, steering_angle, delay):
+  board_drive.digital[drive_pin].mode = PWM
+  board_drive.digital[turn_pin].mode = SERVO
+  board_drive.digital[drive_pin].write(motor_speed)
+  board_drive.digital[turn_pin].write(steering_angle)
   sleep(delay)
 
 # other commands 
-
 def delay(delay):
   sleep(delay)
 

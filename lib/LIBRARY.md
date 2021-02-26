@@ -1,6 +1,6 @@
 # Robotics Club Library
 
-The Robotics Club Library is designed to make the interface between the raspberry pi and the arduino as simple as possible. Through making easy to use commands to control both the sensors and movement of the car. 
+The Robotics Club Library is designed to make the interface between the raspberry pi and the arduino as simple as possible. Through making easy to use commands to control both the sensors and movement of the car written in python. 
 
 ## Installation
 
@@ -10,7 +10,7 @@ The Robotics Club Library is designed to make the interface between the raspberr
 * [Arduino](https://www.arduino.cc/) (supports uno but could be ported)
 
 ## Usage
-#### Setting up arduino 
+#### Setting up [Firmata protocol](https://github.com/firmata/protocol) (ardunio)
 
 1. Make sure you Arduino board is selected in "Tools" > "Port"
 
@@ -27,18 +27,37 @@ The Robotics Club Library is designed to make the interface between the raspberr
 
 1. Import the library ( figure out how to do )
 
-2. find and define port for arduino
+2. Find and define port for arduino
 
-3. use commands from the library to control the car ( make list of commands )
+3. Use commands from the library to control the car ( make list of commands )
+
+### Variables you might want to define in your program
+##### DRIVE 
+* board_drive_port
+* drive_pin
+* turn_pin
+* forward_center
+* backward_center
+* right_max_angle
+* left_max_angle
+* forward_motor_speed
+* backward_motor_speed
+* right_motor_speed
+* left_motor_speed
+* right_delay
+* left_delay
+* true_speed
+
+##### SENS
+* units    
 
 ## TODOs
 * Write tests for the lib
 * Write hardware tests for the lib
-* Make default definitions for all vars that can them be changed by user
+* Make default definitions for all vars that can then be changed by user
 * Sens_pkg
-  * add support for both imperial and metric
+  * add support for the compass and the gps
 * Drive_pkg
   * add support for the lights
-  * switch to distance instead of delays (might use gps)
-  * add software steering correction using gps and compass so the car will drive dead straight
-  * further explore the capabilities of the rev spark
+  * switch to distance instead of delays (have option to use gps)
+  * add software steering correction using gps and compass so the car will drive dead straight * further explore the capabilities of the rev spark
