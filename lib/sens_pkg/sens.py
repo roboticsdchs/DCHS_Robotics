@@ -3,28 +3,24 @@ import pyfirmata
 import sys
 import time
 
-#setup for pyFirmata
-def board_sens_setup(board_sens_port)
-  global board_sens = pyfirmata.Arudino("'" + sens_port + "'")
-
 # formulas for ultrasonic distance measurement
 #distanceCm= duration*0.034/2;
 #distanceInch = duration*0.0133/2;
 
-def ultra(units, trig_pin, echo_pin, identifier):
-  board_sens.digital[trig_pin].mode = OUTPUT
-  board_sens.digital[echo_pin].mode = INPUT 
+def ultra(sens_board_port, units, trig_pin, echo_pin, identifier):
+  pyfirmata.Arduino('"' + sens_board_port + '"').digital[trig_pin].mode = OUTPUT
+  pyfirmata.Arduino('"' + sens_board_port + '"').digital[echo_pin].mode = INPUT 
   while True:
-    board_sens.digital[trig + trig_pin].write(0)
+    pyfirmata.Arduino('"' + sens_board_port + '"').digital[trig + trig_pin].write(0)
     sleep(0.001)
-    board_sens.digital[trig + trig_pin].write(1)
+    pyfirmata.Arduino('"' + sens_board_port + '"').digital[trig + trig_pin].write(1)
     sleep(0.001)
-    board_sens.digital[trig + trig_pin].write(0)
+    pyfirmata.Arduino('"' + sens_board_port + '"').digital[trig + trig_pin].write(0)
     # fix for no support for pulseIn
-    while board_sens.digital[echo + echo_pin].write(0)
+    while pyfirmata.Arduino('"' + sens_board_port + '"').digital[echo + echo_pin].write(0)
       pass
       start = time.time()
-    while board_sens.digital[echo + echo_pin].write(1)
+    while pyfirmata.Arduino('"' + sens_board_port + '"').digital[echo + echo_pin].write(1)
       pass
       end = time.time()
     if(units == metric):
