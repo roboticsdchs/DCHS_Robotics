@@ -1,68 +1,64 @@
 #!/usr/bin/env python3
 
-import pyfirmata
 import time
 import sys
+from pymata4 import pymata4
 
 # what does true_speed do? do we need to include it in anything?
 
-# designed to work with rev spark motor controller and servo to steer the car
-
+# designed to work with rev spark motor controller and D645MW to steer the car
 
 # switch to .writeMicroseconds so that we can use docs on rev spark
 
-# switch to pymata4 because it has docs
-  
-# forward drive commands
-def forward(drive_board_port, drive_pin, turn_pin, forward_angle, delay):
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[drive_pin].mode = SERVO 
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[turn_pin].mode = SERVO
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[drive_pin].write(254)
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[turn_pin].write(forward_angle)
-  sleep(delay)
+# use FirmataExpress > StandardFirmata
 
-# backward drive commands 
-def backward(drive_board_port, drive_pin, turn_pin, backward_angle, delay):
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[drive_pin].mode = SERVO
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[turn_pin].mode = SERVO
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[drive_pin].write(70)
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[turn_pin].write(backward_angle)
-  sleep(delay)
+# motor speed is from 0-180 i think as you control the rev spark as a servo
 
-# left drive commands
-def left(drive_board_port, drive_pin, turn_pin, left_angle, left_delay):
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[drive_pin].mode = SERVO
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[turn_pin].mode = SERVO
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[drive_pin].write(110)
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[turn_pin].write(left_angle)
-  sleep(delay)
+# driving stuff
 
-# right drive commands
-def right(drive_board_port, drive_pin, turn_pin, right_angle, right_delay):
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[drive_pin].mode = SERVO
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[turn_pin].mode = SERVO
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[drive_pin].write(110)
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[turn_pin].write(right_angle)
-  sleep(delay)
-
-# general drive commands 
 def drive(drive_board_port, drive_pin, turn_pin, motor_speed, steering_angle, delay):
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[drive_pin].mode = SERVO
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[turn_pin].mode = SERVO
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[drive_pin].write(motor_speed)
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[turn_pin].write(steering_angle)
-  sleep(delay)
+  drive_board.set_pin_mode_servo(drive_pin, 1000, 2000) #https://www.revrobotics.com/content/docs/REV-11-1200-UM.pdf
+  drive_board.servo_write(drive_pin, motor_speed)
+  drive_board.set_pin_mode_servo(turn_pin, 750, 2250) #https://www.servocity.com/d645mw-servo/
+  drive_board.servo_write(steering_angle)
+  time.sleep(delay)
+ 
+def forward(drive_board_port, drive_pin, turn_pin, delay):
+  drive_board.set_pin_mode_servo(drive,pin, 100, 2000)
+  drive_board.servo_write(drive_pin, 180)
+  drive_board.servo_pin_mode_servo(turn_pin, 750, 2250)
+  drive_board.servo_write(90)
+  time.sleep(delay)
 
+def backward(drive_board_port, drive_pin, turn_pin, backward_angle, delay):
+  drive_board.set_pin_mode_servo(drive,pin, 100, 2000)
+  drive_board.servo_write(drive_pin, 0)
+  drive_board.servo_pin_mode_servo(turn_pin, 750, 2250)
+  drive_board.servo_write(90)
+  time.sleep(delay)
+
+def left(drive_board_port, drive_pin, turn_pin, left_angle, left_delay):
+  drive_board.set_pin_mode_servo(drive,pin, 100, 2000)
+  drive_board.servo_write(drive_pin, 180)
+  drive_board.servo_pin_mode_servo(turn_pin, 750, 2250)
+  drive_board.servo_write(45)
+  time.sleep(delay)
+
+def right(drive_board_port, drive_pin, turn_pin, right_angle, right_delay):
+  drive_board.set_pin_mode_servo(drive,pin, 100, 2000)
+  drive_board.servo_write(drive_pin, 180)
+  drive_board.servo_pin_mode_servo(turn_pin, 750, 2250)
+  drive_board.servo_write(135)
+  time.sleep(delay)
 
 def coast(drive_board_port, drive_pin, turn_pin, steering_angle, delay):
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[drive_pin].mode = SERVO
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[turn_pin].mode = SERVO
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[drive_pin].write(100)
-  pyfirmata.Arduino('"' + drive_board_port + '"').digital[turn_pin].write(steering_angle)
-  sleep(delay)
-
+  drive_board.set_pin_mode_servo(drive,pin, 100, 2000)
+  drive_board.servo_write(drive_pin, 90)
+  drive_board.servo_pin_mode_servo(turn_pin, 750, 2250)
+  drive_board.servo_write(135)
+  time.sleep(delay)
 
 # other commands 
 def delay(delay):
-  sleep(delay)
-
+  time.sleep(delay)
+ 
