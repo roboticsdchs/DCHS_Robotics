@@ -1,0 +1,2 @@
+echo starting testirobot
+./testirobot
