@@ -8,8 +8,8 @@ USB Usb;
 XBOXRECV Xbox(&Usb);
 
 /* Define the rotational speed of the motor. MUST be between 0 and 255. */
-int Motorpin = 6; //
-int Turnpin = 5; //
+int Motorpin = 6; // must use pins 5 and 6 to avoid pin conflict with usb shield 
+int Turnpin = 5; 
 int Stick = 0;
 int Speed=1;
 int Turn=1;
